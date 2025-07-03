@@ -61,6 +61,7 @@ If not operating according to this role, user will redeclare the role
 - Added comprehensive project specification with user flow examples
 - Established mandatory workflow rules adapted for Rust development
 - Unified documentation language to English for consistency
+- Added required dependencies: dialoguer, serde, serde_yaml, anyhow, notify-rust
 
 ---
 
@@ -105,8 +106,9 @@ warmups:
 ## Dependencies
 
 - `dialoguer` - Interactive CLI user interface
+- `serde` - Serialization framework
 - `serde_yaml` - Configuration file parsing
-- `std::process::Command` - Git and package manager command execution
+- `anyhow` - Error handling
 - `notify-rust` - OS notifications (optional)
 
 ## Expected User Flow
