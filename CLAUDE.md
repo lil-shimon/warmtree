@@ -62,6 +62,7 @@ If not operating according to this role, user will redeclare the role
 - Established mandatory workflow rules adapted for Rust development
 - Unified documentation language to English for consistency
 - Added required dependencies: dialoguer, serde, serde_yaml, anyhow, notify-rust
+- **Learning**: Must always output the 7 mandatory principles verbatim at the beginning of every session before any work - this is non-negotiable and ensures proper workflow discipline
 
 ---
 
