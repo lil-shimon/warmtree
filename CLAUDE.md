@@ -63,6 +63,9 @@ If not operating according to this role, user will redeclare the role
 - Unified documentation language to English for consistency
 - Added required dependencies: dialoguer, serde, serde_yaml, anyhow, notify-rust
 - **Learning**: Must always output the 7 mandatory principles verbatim at the beginning of every session before any work - this is non-negotiable and ensures proper workflow discipline
+- **Learning**: Separate commits by category rather than large monolithic commits - improves code review and git history clarity
+- Implemented interactive worktree creation functionality with TDD approach
+- Created PR #1 for worktree functionality: https://github.com/lil-shimon/warmtree/pull/1
 
 ---
 
