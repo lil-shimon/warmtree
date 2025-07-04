@@ -1,5 +1,6 @@
 use anyhow::Result;
 use dialoguer::{Select, Input, Confirm};
+use std::path::Path;
 use crate::worktree::{Worktree, list_worktrees, create_worktree};
 
 pub fn run_interactive_worktree_menu() -> Result<()> {
@@ -36,8 +37,9 @@ fn format_worktree_display(worktree: &Worktree) -> String {
 }
 
 fn extract_directory_name(path: &str) -> String {
-    path.split('/')
-        .last()
+    Path::new(path)
+        .file_name()
+        .and_then(|name| name.to_str())
         .unwrap_or(path)
         .to_string()
 }
@@ -106,6 +108,8 @@ mod tests {
     fn test_extract_directory_name() {
         assert_eq!(extract_directory_name("/path/to/worktree"), "worktree");
         assert_eq!(extract_directory_name("simple-name"), "simple-name");
+        assert_eq!(extract_directory_name("/repo/feature-branch"), "feature-branch");
+        assert_eq!(extract_directory_name(""), "");
     }
 
     #[test]
